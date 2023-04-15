@@ -1,0 +1,26 @@
+
+<%- include('partials/header')-%>
+<h1>Home</h1>
+<p> <%= startingContent %></p>
+<br><br><br>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <%posts.forEach((post)=>{%>
+    <div class="col">
+      <div class="card">
+        <img src="/images/<%= post.title %>.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5>
+          <p class="card-text"><%= post.content.substring(0,100)+"..." %></p>
+          <a href="/posts/<%=post._id%>" class="btn color-button">Read More</a>
+        </div>
+      </div>
+    </div>
+  <%})%>
+</div>
+
+
+<%- include('partials/footer') -%>
+
+
+

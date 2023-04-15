@@ -1,0 +1,15 @@
+
+<%- include('partials/header')-%>
+<div class="post-each">
+    <img class="post-image" src="/images/<%= title %>.png" alt="">
+    <h1><%=title%></h1>
+<br>
+<br><br>
+<div class="summary">
+    <p><%- content.replace(/\r\n|\r|\n/g, '</br>') %></p>
+</div>
+
+</div>
+
+<%- include('partials/footer') -%>
+
