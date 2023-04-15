@@ -49,7 +49,14 @@ mongoose.connect(process.env.MONGODB_CONNECT, {
   useNewUrlParser: true, 
   writeConcern: { w: "majority" },
   useUnifiedTopology: true
-});
+})
+.then(() => {
+  console.log("Mongo connection successful");
+})
+.catch((error) => {
+  console.log("Mongo conneciton failed");
+  console.log(error);
+})
 
 
 
